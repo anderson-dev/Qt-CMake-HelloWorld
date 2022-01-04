@@ -10,6 +10,11 @@ set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTOUIC ON)
 set(CMAKE_AUTORCC ON)
 
+include(${CMAKE_BINARY_DIR}/conanbuildinfo.cmake)
+conan_basic_setup()
+
+include_directories(${CONAN_INCLUDE_DIRS})
+
 # There may be a way to tell up front if Qt5 is going to be found, but I haven't found
 # a foolproof way to do it yet, so settle for the default error message for now.
 #if(NOT CMAKE_PREFIX_PATH AND NOT Qt5Widgets_DIR)
