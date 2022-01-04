@@ -8,7 +8,7 @@ class HelloWorld(ConanFile):
      description = "Base Library A of the example project."
      topics = ("<Put some tag here>", "<here>", "<and here>")
      settings = "os", "arch", "compiler", "build_type"
-     generators = "cmake_find_package"
+     generators = "cmake", "cmake_find_package"
 
      def build_requirements(self):
          self.build_requires("gtest/1.8.1")
