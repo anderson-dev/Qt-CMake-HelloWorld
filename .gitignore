@@ -22,3 +22,7 @@
 
 # Editor temp/backup files
 *~
+
+# CMake build folders
+./build
+./out
