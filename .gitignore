@@ -24,5 +24,8 @@
 *~
 
 # CMake build folders
-./build
-./out
+/build
+/out
+
+# VS transient files
+.vs
