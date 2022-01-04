@@ -7,8 +7,8 @@ class HelloWorld(ConanFile):
      url = "git@gitlab.com:<url/project>"
      description = "Base Library A of the example project."
      topics = ("<Put some tag here>", "<here>", "<and here>")
-     generators = "cmake"
-    #  generators = "qt", "cmake", "cmake_find_package_multi", "qmake"
+     settings = "os", "arch", "compiler", "build_type"
+     generators = "cmake_find_package"
 
      def build_requirements(self):
          self.build_requires("gtest/1.8.1")
