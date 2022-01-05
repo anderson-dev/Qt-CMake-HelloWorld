@@ -2,6 +2,9 @@ cmake_minimum_required(VERSION 3.8.2)
 
 project(helloworld)
 
+list(APPEND CMAKE_MODULE_PATH ${CMAKE_BINARY_DIR})
+list(APPEND CMAKE_PREFIX_PATH ${CMAKE_BINARY_DIR})
+
 # Find includes in the build directories
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
@@ -10,10 +13,10 @@ set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTOUIC ON)
 set(CMAKE_AUTORCC ON)
 
-include(${CMAKE_BINARY_DIR}/conanbuildinfo.cmake)
-conan_basic_setup()
+#include(${CMAKE_BINARY_DIR}/conanbuildinfo.cmake)
+#conan_basic_setup()
 
-include_directories(${CONAN_INCLUDE_DIRS})
+#include_directories(${CONAN_INCLUDE_DIRS})
 
 # There may be a way to tell up front if Qt5 is going to be found, but I haven't found
 # a foolproof way to do it yet, so settle for the default error message for now.
