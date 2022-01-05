@@ -35,7 +35,7 @@ if(WIN32)
 endif()
 
 # Find the QtWidgets library
-find_package(Qt5 REQUIRED COMPONENTS Widgets)
+find_package(Qt5 REQUIRED COMPONENTS Widgets CONFIG)
 
 # Tell CMake to create the helloworld executable
 add_executable(helloworld main.cpp mainwindow.cpp mainwindow.ui resources.qrc)
