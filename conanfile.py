@@ -1,4 +1,5 @@
 from conans import ConanFile, tools
+from conan.tools.cmake import CMakeToolchain
 
 class HelloWorld(ConanFile):
     name = "HelloWorld"
@@ -8,7 +9,15 @@ class HelloWorld(ConanFile):
     description = "Base Library A of the example project."
     topics = ("<Put some tag here>", "<here>", "<and here>")
     settings = "os", "arch", "compiler", "build_type"
-    generators = "cmake_find_package_multi"
+    # generators = "cmake_find_package_multi"
+    generators = "CMakeToolchain", "cmake_find_package_multi"
+
+    def generate(self):
+        tc = CMakeToolchain(self)
+        # customize toolchain "tc"
+        tc.generator= "Ninja"
+        tc.generate()
+        # Or provide your own custom logic
 
     def build_requirements(self):
         self.build_requires("gtest/1.8.1")

@@ -2,8 +2,8 @@ cmake_minimum_required(VERSION 3.8.2)
 
 project(helloworld)
 
-list(APPEND CMAKE_MODULE_PATH ${CMAKE_BINARY_DIR})
-list(APPEND CMAKE_PREFIX_PATH ${CMAKE_BINARY_DIR})
+#list(APPEND CMAKE_MODULE_PATH ${CMAKE_BINARY_DIR})
+#list(APPEND CMAKE_PREFIX_PATH ${CMAKE_BINARY_DIR})
 
 # Find includes in the build directories
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
