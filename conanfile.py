@@ -11,6 +11,7 @@ class HelloWorld(ConanFile):
     settings = "os", "arch", "compiler", "build_type"
     # generators = "cmake_find_package_multi"
     generators = "CMakeToolchain", "cmake_find_package_multi"
+    default_options = "qt:shared=True"
 
     def generate(self):
         tc = CMakeToolchain(self)
